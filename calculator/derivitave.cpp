@@ -1,20 +1,3 @@
-// #include <iostream>
-
-// using namespace std;
-
-// int main(){
-//     // decalre variable for radius and volume
-//     float radius, volume;
-
-//     cout <<"Please enter the radius: ";
-//     cin >>radius;
-//     cout << radius << endl;
-
-//     volume = 4/3 * 3.14 * radius* radius * radius;
-//     cout << "the volume of a sphere with radius " << radius  << " is " << volume << endl;
-//     return 0;
-// }
-
 #include <iostream>
 #include <math.h>
 using namespace std;
@@ -33,9 +16,35 @@ int main(){
 
     equation = coefficient * pow(char(x),exponent);
 
+    float num1, num2;   
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> opertion;
 
-    
-    cout << "the volume of a sphere with coefficient and exponent " <<  coefficient << exponent << 
-    " is " << equation << endl;
+  cout << "Enter two numbers: ";
+  cin >> num1 >> num2;
+
+  switch(op) {
+
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
     return 0;
 }
